@@ -1,3 +1,8 @@
+import ImageSlider from "@/Components/ImageSlider";
 export default function Main() {
-  return <div className=""> </div>;
+  return (
+    <div className="">
+      <ImageSlider />
+    </div>
+  );
 }

@@ -1,22 +1,29 @@
 import React from "react";
 import Link from "next/link";
+import Search from "@/app/Search/page";
+import { FaRegHeart } from "react-icons/fa";
+import { FaBalanceScale } from "react-icons/fa";
+import { SlBasket } from "react-icons/sl";
 export const Navbar = () => {
   return (
-    <div className="flex container pt-5 ">
-      <nav className="container pt-5 flex justify-between items-center ">
-        <Link href="/">
-          <img className="w-1/2" src="/pictures/Fashion.jpg" alt="" />
-          <div className="flex gap-5"> </div>
+    <div className=" ">
+      {/* <div className=" flex gap-5 container  justify-center items-center">
+        <div>
+          <Link className="" href={"/"}>
+            {" "}
+            <img
+              src="/pictures/Fashion.jpg"
+              alt=""
+              className="w-1/3 h-1/3"
+            />{" "}
+          </Link>
+        </div>{" "}
+        <Link
+          className="hover:underline  hover:text-gray-950  text-sm  text-gray-700 font-normal "
+          href="/Home"
+        >
+          Home
         </Link>{" "}
-        <Link href="/Home">
-          <input
-            className="  border-gray-900 border rounded-lg p-2 mb-4 "
-            type="text"
-            placeholder="Search..."
-          />
-        </Link>
-      </nav>
-      <div className="gap-5 flex    ">
         <Link
           className="hover:underline  hover:text-gray-950  text-sm  text-gray-700 font-normal "
           href="/About "
@@ -25,17 +32,26 @@ export const Navbar = () => {
         </Link>
         <Link
           className="hover:underline  hover:text-gray-950  text-sm  text-gray-700 font-normal "
-          href="/Login"
-        >
-          Login
-        </Link>
-        <Link
-          className="hover:underline  hover:text-gray-950  text-sm  text-gray-700 font-normal "
           href="Contact"
         >
           Contact
         </Link>
-      </div>
+      </div> */}
+      <nav className="container pt-5 flex justify-between mt-5 fixed z-50 ">
+        <Search />
+
+        <div className="flex gap-5 ">
+          <Link href={""}>
+            <FaBalanceScale className=" w-7 h-7 " />
+          </Link>
+          <Link href={""}>
+            <FaRegHeart className="w-7 h-7 " />
+          </Link>{" "}
+          <Link className="" href="/Cart">
+            <SlBasket className="w-7 h-7 " />
+          </Link>{" "}
+        </div>
+      </nav>
     </div>
   );
 };
